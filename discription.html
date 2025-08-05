@@ -12,18 +12,6 @@
             margin: 0;
             padding: 20px;
         }
-        .glass-container {
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 20px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
-            backdrop-filter: blur(16px) saturate(180%);
-            -webkit-backdrop-filter: blur(16px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 40px 32px;
-            margin-top: 80px;
-        }
         .matte-nav {
             width: 100vw;
             min-width: 100vw;
@@ -109,6 +97,24 @@
             border-radius: 2px;
             transition: background 0.2s;
         }
+        .wheel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            width: 100vw;
+        }
+        .wheel-svg .wheel-sector,
+        .wheel-svg .wheel-label {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        .wheel-svg:hover .wheel-sector,
+        .wheel-svg:hover .wheel-label {
+            opacity: 1;
+            pointer-events: auto;
+        }
     </style>
 </head>
 <body>
@@ -125,16 +131,25 @@
                 <div class="menu-bar-line"></div>
             </div>
         </div>
-    <div class="glass-container" style="text-align:center; margin-top: 120px;">
-        <div>
-            <h1>罗小黑战记</h1>
-            <h2>The Legend of Hei</h2>
-        </div>
-        <div style="margin: 36px 0 0 0; display: flex; flex-direction: column; gap: 24px; align-items: center;">
-            <a href="characters.html" style="color:#222;font-size:1.3rem;text-decoration:none;padding:12px 36px;border-radius:12px;background:rgba(255,255,255,0.5);box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:background 0.2s;">角色介绍</a>
-            <a href="developers.html" style="color:#222;font-size:1.3rem;text-decoration:none;padding:12px 36px;border-radius:12px;background:rgba(255,255,255,0.5);box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:background 0.2s;">作者</a>
-            <a href="works.html" style="color:#222;font-size:1.3rem;text-decoration:none;padding:12px 36px;border-radius:12px;background:rgba(255,255,255,0.5);box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:background 0.2s;">主要作品</a>
-        </div>
+    <div class="wheel-container">
+        <svg class="wheel-svg" width="400" height="400" viewBox="0 0 400 400" style="display:block;cursor:pointer;">
+            <g>
+                <a href="characters.html">
+                    <path class="wheel-sector" d="M200,200 L200,40 A160,160 0 0,1 338.56,120 Z" fill="#ffe082" stroke="#222" stroke-width="3"/>
+                    <text class="wheel-label" x="270" y="100" font-size="22" fill="#222" text-anchor="middle" dominant-baseline="middle">角色介绍</text>
+                </a>
+                <a href="developers.html">
+                    <path class="wheel-sector" d="M200,200 L338.56,120 A160,160 0 0,1 109.8,320 Z" fill="#b3e5fc" stroke="#222" stroke-width="3"/>
+                    <text class="wheel-label" x="255" y="260" font-size="22" fill="#222" text-anchor="middle" dominant-baseline="middle">作者</text>
+                </a>
+                <a href="works.html">
+                    <path class="wheel-sector" d="M200,200 L109.8,320 A160,160 0 0,1 200,40 Z" fill="#c8e6c9" stroke="#222" stroke-width="3"/>
+                    <text class="wheel-label" x="115" y="180" font-size="22" fill="#222" text-anchor="middle" dominant-baseline="middle">作品</text>
+                </a>
+            </g>
+            <circle cx="200" cy="200" r="60" fill="#fff" stroke="#222" stroke-width="2"/>
+            <text x="200" y="215" font-size="20" fill="#222" text-anchor="middle" font-weight="bold">罗小黑战记</text>
+        </svg>
     </div>
 </body>
 </html>
