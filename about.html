@@ -24,46 +24,55 @@
                 padding: 40px 32px;
                 margin-top: 80px;
             }
-            .matte-nav {
-                width: 100%;
-                background: linear-gradient(90deg, #d3d3d3 0%, #e0e0e0 100%);
-                box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 18px 0 10px 0;
+            .menu-bar {
                 position: fixed;
-                top: 0;
-                left: 0;
-                z-index: 1000;
+                top: 18px;
+                right: 24px;
+                left: auto;
+                z-index: 2100;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(0,0,0,0.18);
+                border-radius: 50%;
+                cursor: pointer;
+                transition: background 0.2s;
+                user-select: none;
             }
-            .matte-nav a {
-                color: #333;
-                text-decoration: none;
-                font-size: 1.1rem;
-                font-weight: 500;
-                margin: 0 28px;
-                padding: 6px 14px;
-                border-radius: 8px;
-                transition: background 0.2s, color 0.2s;
+            .menu-bar:hover {
+                background: rgba(255,255,255,0.18);
             }
-            .matte-nav a:hover {
-                background: #bdbdbd;
-                color: #000;
+            .menu-bar-inner {
+                width: 24px;
+                height: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .menu-bar-line {
+                height: 3px;
+                width: 100%;
+                background: #222;
+                border-radius: 2px;
+                transition: background 0.2s;
             }
         </style>
     </head>
     <body>
-        <nav class="matte-nav">
-            <a href="discription.html">介绍</a>
-            <a href="about.html">关于</a>
-            <a href="index.html">首页</a>
-        </nav>
         <div class="glass-container">
             <div>
                 <h1>关于</h1>
                 <p>本网站由个人制作，仅用于学习交流，不用于商业用途。</p>
                 <p>如果有侵权请联系我删除。</p>
+            </div>
+        </div>
+        <div class="menu-bar" onclick="window.location.href='guide.html'">
+            <div class="menu-bar-inner">
+                <div class="menu-bar-line"></div>
+                <div class="menu-bar-line"></div>
+                <div class="menu-bar-line"></div>
             </div>
         </div>
     </body>

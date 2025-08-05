@@ -25,42 +25,113 @@
                 margin-top: 80px;
             }
             .matte-nav {
-                width: 100%;
+                width: 100vw;
+                min-width: 100vw;
                 background: linear-gradient(90deg, #d3d3d3 0%, #e0e0e0 100%);
                 box-shadow: 0 2px 8px rgba(0,0,0,0.04);
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 18px 0 10px 0;
+                justify-content: flex-start;
+                align-items: stretch;
+                height: 66px;
+                min-height: 66px;
+                padding: 0;
                 position: fixed;
                 top: 0;
                 left: 0;
                 z-index: 1000;
             }
             .matte-nav a {
+                display: flex;
+                align-items: center;
                 color: #333;
                 text-decoration: none;
                 font-size: 1.1rem;
                 font-weight: 500;
                 margin: 0 28px;
-                padding: 6px 14px;
+                padding: 0 14px;
                 border-radius: 8px;
                 transition: background 0.2s, color 0.2s;
+                height: 100%;
             }
             .matte-nav a:hover {
                 background: #bdbdbd;
                 color: #000;
             }
+            .logo-left {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                margin-left: 24px;
+                margin-right: 18px;
+            }
+            .logo-left img {
+                height: 38px;
+                width: auto;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+                background: #fff6;
+            }
+            .logo-left span {
+                margin-left: 10px;
+                font-size: 1.1rem;
+                color: #222;
+                letter-spacing: 2px;
+                font-family: '微软雅黑',sans-serif;
+            }
+            .menu-bar {
+                position: fixed;
+                top: 18px;
+                right: 24px;
+                left: auto;
+                z-index: 2100;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(0,0,0,0.18);
+                border-radius: 50%;
+                cursor: pointer;
+                transition: background 0.2s;
+                user-select: none;
+            }
+            .menu-bar:hover {
+                background: rgba(255,255,255,0.18);
+            }
+            .menu-bar-inner {
+                width: 24px;
+                height: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .menu-bar-line {
+                height: 3px;
+                width: 100%;
+                background: #222;
+                border-radius: 2px;
+                transition: background 0.2s;
+            }
         </style>
     </head>
     <body>
         <nav class="matte-nav">
-            <a href="index.html">首页</a>
-            <a href="discription.html">介绍</a>
-            <a href="about.html">关于</a>
+            <div class="logo-left">
+                <img src="L.png" alt="L图标">
+                <span>罗小黑</span>
+            </div>    
         </nav>
-        <div class="glass-container">
-       <p>欢迎各位来到罗小黑的世界!!!</p>
+        <div class="menu-bar" onclick="window.location.href='guide.html'">
+            <div class="menu-bar-inner">
+                <div class="menu-bar-line"></div>
+                <div class="menu-bar-line"></div>
+                <div class="menu-bar-line"></div>
+            </div>
+        </div>
+        <div class="glass-container" style="text-align:center;">
+             <h1>罗小黑战记</h1>
+            <h2>The Legend of Hei</h2>
+            <p>欢迎各位来到罗小黑的世界!!!（山新声）</p>
         </div>
         <div style="text-align:center;margin:24px 0;">
             <img src="R-C.png" alt="R-C图片" style="max-width:90%;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.10);">
@@ -70,9 +141,6 @@
             <a href="https://www.weibo.com/u/2019071187" target="_blank" style="display:inline-block;margin:12px 24px;font-size:1.1rem;">官方微博</a>
             <a href="https://space.bilibili.com/5632230?spm_id_from=333.337.0.0" target="_blank" style="display:inline-block;margin:12px 24px;font-size:1.1rem;">官方B站</a>
         </div>
-        <div style="position:fixed;top:18px;left:24px;z-index:2000;display:flex;align-items:center;">
-            <img src="L.png" alt="L图标" style="height:54px;width:auto;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.10);background:#fff6;">
-            <span style="margin-left:10px;font-size:1.1rem;color:#222;letter-spacing:2px;font-family:'微软雅黑',sans-serif;">罗小黑</span>
-        </div>
     </body>
 </html>
+      <p>本网站正在缓慢地开发中，敬请期待！</p>

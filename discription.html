@@ -25,13 +25,16 @@
             margin-top: 80px;
         }
         .matte-nav {
-            width: 100%;
+            width: 100vw;
+            min-width: 100vw;
             background: linear-gradient(90deg, #d3d3d3 0%, #e0e0e0 100%);
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
             display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 18px 0 10px 0;
+            justify-content: flex-start;
+            align-items: stretch;
+            height: 66px;
+            min-height: 66px;
+            padding: 0;
             position: fixed;
             top: 0;
             left: 0;
@@ -51,24 +54,86 @@
             background: #bdbdbd;
             color: #000;
         }
+        .logo-left {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            margin-left: 24px;
+            margin-right: 18px;
+        }
+        .logo-left img {
+            height: 38px;
+            width: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            background: #fff6;
+        }
+        .logo-left span {
+            margin-left: 10px;
+            font-size: 1.1rem;
+            color: #222;
+            letter-spacing: 2px;
+            font-family: '微软雅黑',sans-serif;
+        }
+        .menu-bar {
+            position: fixed;
+            top: 18px;
+            right: 24px;
+            left: auto;
+            z-index: 2100;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.18);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.2s;
+            user-select: none;
+        }
+        .menu-bar:hover {
+            background: rgba(255,255,255,0.18);
+        }
+        .menu-bar-inner {
+            width: 24px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .menu-bar-line {
+            height: 3px;
+            width: 100%;
+            background: #222;
+            border-radius: 2px;
+            transition: background 0.2s;
+        }
     </style>
 </head>
 <body>
         <nav class="matte-nav">
-            <a href="discription.html">介绍</a>
-            <a href="about.html">关于</a>
-            <a href="index.html">首页</a>
+            <div class="logo-left">
+                <img src="L.png" alt="L图标">
+                <span>罗小黑</span>
+            </div>
         </nav>
-    <div class="glass-container">
+        <div class="menu-bar" onclick="window.location.href='guide.html'">
+            <div class="menu-bar-inner">
+                <div class="menu-bar-line"></div>
+                <div class="menu-bar-line"></div>
+                <div class="menu-bar-line"></div>
+            </div>
+        </div>
+    <div class="glass-container" style="text-align:center; margin-top: 120px;">
         <div>
             <h1>罗小黑战记</h1>
             <h2>The Legend of Hei</h2>
         </div>
-        <div>
-            <p>《罗小黑战记》是一部由MTJJ执导和编剧、寒木春华动画制作的中国原创动画，并有动画电影、漫画等衍生作品</p>
-            <p>罗小黑战记的动画自2011年开始连载，更新速度为有生之年级别的三个月到半年一更，15年年末有超速更新趋势。
-    之后因首部电影版的制作而暂停更新，然而在首部电影版播出之后仍长时间未恢复原频率。2021年3月20日发布“众生之门篇”定档PV，于4月24日开始每周11:00更新。40集更新了11年，折合约一年更新3集。不愧是“荣获”b站2020年度国创鸽王的番（捂脸）
-    TV动画、电影、漫画《蓝溪镇》均为同一世界线下的故事，但故事发生的时间有先后的区别。</p>
+        <div style="margin: 36px 0 0 0; display: flex; flex-direction: column; gap: 24px; align-items: center;">
+            <a href="characters.html" style="color:#222;font-size:1.3rem;text-decoration:none;padding:12px 36px;border-radius:12px;background:rgba(255,255,255,0.5);box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:background 0.2s;">角色介绍</a>
+            <a href="developers.html" style="color:#222;font-size:1.3rem;text-decoration:none;padding:12px 36px;border-radius:12px;background:rgba(255,255,255,0.5);box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:background 0.2s;">作者</a>
+            <a href="works.html" style="color:#222;font-size:1.3rem;text-decoration:none;padding:12px 36px;border-radius:12px;background:rgba(255,255,255,0.5);box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:background 0.2s;">主要作品</a>
         </div>
     </div>
 </body>

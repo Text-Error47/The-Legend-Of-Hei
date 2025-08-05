@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>罗小黑战记</title>
+        <style>
+            body {
+                background: black;
+                background-size: cover;
+                min-height: 100vh;
+            }
+            .close-x {
+                position: fixed;
+                top: 18px;
+                left: 24px;
+                z-index: 2000;
+                font-size: 2.2rem;
+                color: #fff;
+                background: rgba(0,0,0,0.3);
+                border-radius: 50%;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: background 0.2s;
+                user-select: none;
+            }
+            .close-x:hover {
+                background: rgba(255,255,255,0.18);
+                color: #222;
+            }
+            .guide-links {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 32px;
+                z-index: 10;
+            }
+            .guide-links a {
+                color: #fff;
+                font-size: 2rem;
+                text-decoration: none;
+                letter-spacing: 2px;
+                padding: 12px 36px;
+                border-radius: 12px;
+                background: rgba(0,0,0,0.22);
+                transition: background 0.2s, color 0.2s;
+            }
+            .guide-links a:hover {
+                background: #fff;
+                color: #222;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="close-x" onclick="window.history.back()">×</div>
+        <div class="guide-links">
+            <a href="index.html">首页</a>
+            <a href="discription.html">介绍</a>
+            <a href="about.html">关于</a>
+        </div>
+    </body>
+</html>
